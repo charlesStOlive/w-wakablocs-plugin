@@ -1,0 +1,24 @@
+# ===================================
+#  Field Definitions
+# ===================================
+
+fields:
+    title: 
+        label: Titre
+    image:
+        label: Choisissez une image
+        type: mediafinder
+        span: full
+    width:
+        label: width
+        span: auto
+    height:
+        label: height
+        span: auto
+    crop:
+        label: Méthode de reditionement
+        span: auto
+        type: dropdown
+        options: listCropMode
+        default: fit
+    

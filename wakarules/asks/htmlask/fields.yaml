@@ -1,0 +1,21 @@
+# ===================================
+#  Field Definitions
+# ===================================
+
+fields:
+    is_fnc:
+        label: Pour une fonction ? 
+        type: checkbox
+        span: left
+    fnc_attributes:
+        label: Nom de la fonction
+        span: right
+        trigger:
+            action: show
+            field: is_fnc
+            condition: checked
+    html:
+        label: Text HTML
+        type: richeditor
+        size: huge
+        toolbarButtons: bold|italic|underline|align|inlineStyle|paragraphStyle|insertLink|formatOL|formatUL|redo|clearFormatting|fullscreen|html

@@ -1,0 +1,64 @@
+<li
+    id="<?= 'rule'.$rule->id ?>"
+    data-rule-id="<?= $rule->id ?>"
+    class="rule-item <?= $rule->hasFieldConfig() ? '' : 'no-form' ?>">
+    <div>
+        <div class="icons">
+            <span class="icon"><i class="<?= e($rule->getSubFormIcon()) ?>"style="<?php if($rule->isFnc()) : ?>color:orange<?php endif ?>"></i></span>
+        </div>
+        <a href="javascript:;" data-rules-settings>
+            <div class="bloc-title">
+                <div class="child code">
+                        <span>
+                            <?= e($rule->getTitle()) ?>
+                            
+                            <span class="subcode">
+                                <br>
+                                <?php $code = $rule->getCode() ?>
+                                <?php if($share = $rule->getShareMode()) : ?>
+                                    <i class="icon-code" code="<?= $code ?>"></i> : <?= $code?> | <i class="icon-share-alt"></i> <?=$share?> (<?= $this->countShareModel($rule) ?>)
+                                <?php else: ?>
+                                <i class="icon-code" code="<?= $code ?>"></i> : <?= $code?>
+                                <?php endif ?>
+                            </span>
+                        </span>
+                        
+                        <?php if($memo = $rule->getMemo()) : ?>
+                                <div class="memo"><i class=" icon-question-circle-o"></i> <?=$memo?></div>
+                        <?php endif ?>
+                </div>
+                <div class="child tools">
+                    <?php if($partialComment = $this->getPartialComment($rule)) : ?>
+                        <?= $partialComment ?>
+                    <?php else: ?>
+                        <?= $rule->getText() ?>
+                    <?php endif ?>
+                </div>
+            </div> 
+        </a>
+        <?php if(!$isRestrictedMode) : ?>
+        <ul class="submenu">
+            <?php if($partialBtn = $this->getPartialBtn($rule)) : ?>
+                <?= $partialBtn ?>
+            <?php endif ?>
+            <li>
+                <div>
+                    <a href="javascript:;" data-rules-delete>
+                        <i class="icon-trash-o control-icon"></i>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="group">
+                    <a  class="btn_up" href="javascript:;" data-rules-reorderup>
+                        <i class="icon-chevron-up control-icon"></i>
+                    </a>
+                    <a href="javascript:;" data-rules-reorderdown>
+                        <i class="icon-chevron-down control-icon"></i>
+                    </a>
+                </div>
+            </li>
+        </ul>
+        <?php endif ?>
+    </div>
+</li>

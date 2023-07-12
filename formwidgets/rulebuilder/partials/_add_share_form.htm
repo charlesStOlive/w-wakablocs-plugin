@@ -1,0 +1,46 @@
+<?= Form::open(['id' => 'addRuleRuleForm']) ?>
+
+
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="popup">&times;</button>
+    <h4 class="modal-title">Choisissez un composant paratagé</h4>
+</div>
+<div class="modal-body">
+
+    <?php if ($this->fatalError): ?>
+    <p class="flash-message static error"><?= $fatalError ?></p>
+    <?php else: ?>
+
+    <div class="list-preview">
+        <div class="control-simplelist is-selectable is-scrollable size-large" data-control="simplelist">
+            <ul>
+                <?php foreach ($shares as $class => $share): ?>
+
+                <li>
+                    <a
+                       href="javascript:;"
+                       data-request="<?= $this->getEventHandler('onCreateShareRule') ?>"
+                       data-request-data="share_rule_id: '<?= addslashes($share->id) ?>'"
+                       data-popup-load-indicator>
+                        <h5 class="heading"><?= e(trans($share->getCode())) ?> | <?= e(trans($share->getSubFormName())) ?></h5>
+                    </a>
+                </li>
+
+                <?php endforeach ?>
+            </ul>
+        </div>
+    </div>
+
+    <?php endif ?>
+
+</div>
+
+<div class="modal-footer">
+    <button
+            type="button"
+            class="btn btn-default"
+            data-dismiss="popup">
+        <?= e(trans('backend::lang.form.cancel')) ?>
+    </button>
+</div>
+<?= Form::close() ?>

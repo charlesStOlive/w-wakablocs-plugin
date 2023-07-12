@@ -1,0 +1,4 @@
+1.0.0:
+    - 'Initialisation du plugin et création des tables'
+    - create_rules_tables.php
+

@@ -1,0 +1,31 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    code:
+        label: Code
+        span: storm
+        cssClass: col-xs-4
+        restricted: true
+        required: true
+    subform_emit: 
+        label: Demander lors de la création ?
+        type: checkbox
+        span: storm
+        cssClass: col-xs-4 p-t-md
+        restricted: true
+    is_share:
+        label: Composant partagé
+        type: checkbox
+        span: storm
+        cssClass: col-xs-4 p-t-md
+        restricted: true
+    memo:
+        label: Mémo
+        type: textarea
+        span: full
+        size: tiny
+        cssClass: txt_memo
+        restricted: true
+

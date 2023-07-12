@@ -1,0 +1,12 @@
+{
+    "name": "waka/wn-wakablocs-plugin",
+    "description": "Permet d'ajouter des blocs de contenus morphable sur les modèles",
+    "type": "winter-plugin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Charles Saint Olive",
+            "email": "contact@notilac.fr"
+        }
+    ]
+}

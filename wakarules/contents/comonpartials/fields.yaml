@@ -1,0 +1,13 @@
+# ===================================
+#  Field Definitions
+# ===================================
+
+fields:
+    opt_style_container:
+        label: Styles
+        comment: Separer les styles avec ';'
+    opt_mx_auto:
+            label: Ajouter MX auto
+            type: checkbox
+            comment: 
+
