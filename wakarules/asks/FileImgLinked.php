@@ -68,7 +68,7 @@ class FileImgLinked extends AskBase implements AskInterface
     }
     public function listCropMode()
     {
-        $config =  \Config::get('waka.utils::image.baseCrop');
+        $config =  \Config::get('waka.wakablocs::image.baseCrop');
         //trace_log($config);
         return $config;
         

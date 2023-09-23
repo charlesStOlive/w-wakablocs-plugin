@@ -28,5 +28,5 @@ return [
         'target_com' => 'Cible com',
         'userRoles' => 'Role utilisateur',
         'users' => 'Utilisateurs'
-    ],
+    ]
 ];

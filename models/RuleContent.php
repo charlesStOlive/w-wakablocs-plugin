@@ -9,7 +9,8 @@ use SystemException;
  */
 class RuleContent extends SubFormModel
 {
-    
+
+    use \Waka\Babyler\Classes\Traits\RuleHelpers;
     /**
      * @var string The database table used by the model.
      */
