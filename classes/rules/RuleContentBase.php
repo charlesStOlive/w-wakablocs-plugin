@@ -44,7 +44,7 @@ class RuleContentBase extends SubForm
             'contentName' => $contentName,
             'viewPathCode' => $author.'.'.$plugin.'::wakacontents.'.$contentName,
             'viewPathUrl' => plugins_path($author.'/'.$plugin.'/views/wakacontents/'.$contentName),
-            'themePathUrl' => themes_path('wakatailwind/partials/wakacontents/'.$contentName)
+            'themePathUrl' => themes_path('wakawind/partials/wakacontents/'.$contentName)
         ];
     }
 
@@ -75,7 +75,7 @@ class RuleContentBase extends SubForm
         $view = $this->getConfig('view');
         //trace_log($view);
         if(!View::exists($view)) {
-            \Log::error('la vue '.$view.' n \'exite pas');
+            \Log::error('la vue '.$view.' n \'exite pas makeView RuleContentBase');
         }
         return \View::make($view)->withData($this->resolve($ds))->render();
     }

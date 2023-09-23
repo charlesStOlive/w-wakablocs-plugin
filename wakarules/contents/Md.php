@@ -35,7 +35,7 @@ class Md extends RuleContentBase implements RuleContentInterface
 
     public function listCropMode()
     {
-        $config =  \Config::get('waka.utils::image.baseCrop');
+        $config =  \Config::get('waka.wakablocs::image.baseCrop');
         //trace_log($config);
         return $config;
         

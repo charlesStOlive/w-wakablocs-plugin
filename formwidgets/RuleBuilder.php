@@ -23,8 +23,8 @@ class RuleBuilder extends FormWidgetBase
     protected $full_access = 'noBody';
     public $restrictedMode = true;
     public $autoSave = true;
-    public $prompt = 'waka.utils::lang.rules.prompt';
-    public $prompt_share = 'waka.utils::lang.rules.prompt_share';
+    public $prompt = 'waka.wutils::lang.rules.prompt';
+    public $prompt_share = 'waka.wutils::lang.rules.prompt_share';
     //
     // Object properties
     //

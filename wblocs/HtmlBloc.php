@@ -1,11 +1,8 @@
-<?php namespace Waka\WakaBlocs\WakaRules\Contents;
+<?php namespace Waka\WakaBlocs\Wblocs;
 
-use Waka\WakaBlocs\Classes\Rules\RuleContentBase;
-use Illuminate\Database\Eloquent\Model as EloquentModel;
-use ApplicationException;
-use Waka\WakaBlocs\Interfaces\RuleContent as RuleContentInterface;
+use Waka\WakaBlocs\Classes\WakaBlocs;
 
-class Html extends RuleContentBase implements RuleContentInterface
+class HtmlBloc extends WakaBloc
 {
     
     use \Waka\Wutils\Classes\Traits\DbUtils; //RuleHepers contient notamment listsNested
@@ -15,31 +12,18 @@ class Html extends RuleContentBase implements RuleContentInterface
     /**
      * Returns information about this event, including name and description.
      */
-    public function subFormDetails()
+    public function blocConfig()
     {
         return [
-            'name'        => 'Champs HTML + image',
-            'description' => 'Un titre, un champs HTML et une image',
+            'name'        => 'Champs HTML',
+            'description' => 'Un simple champs HTML',
             'icon'        => 'icon-html5',
-            'premission'  => 'wcli.utils.cond.edit.admin',
         ];
     }
 
-    public $importExportConfig = [
-        'photo' => 'file',
-        'media' => 'media',
-    ];
-
-    public function getText()
+    public function getRaw()
     {
-        //trace_log('getText HTMLASK---');
-        $hostObj = $this->host;
-        //trace_log($hostObj->config_data);
-        $text = $hostObj->config_data['html'] ?? null;
-        if($text) {
-            return strip_tags($text, '<p><br><b><strong><i><em>');
-        }
-        return parent::getText();
+        return $this->
 
     }
 

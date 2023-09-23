@@ -39,6 +39,15 @@ class Plugin extends PluginBase
             $combiner->registerBundle('$/waka/wakablocs/formwidgets/rulebuilder/assets/css/rules.less');
         });
     }
+    public function registerWakaBlocs()
+    {
+        return [
+            'htm' => [
+                ['\Waka\WakaBlocs\Wblocs\HtmlBlocs'],
+            ],
+            'js' => [],
+        ];
+    }
     public function registerWakaRules()
     {
         return [
