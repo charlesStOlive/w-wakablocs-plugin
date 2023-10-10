@@ -2,31 +2,31 @@
 
 return [
     'rules' => [
-        'prompt' => 'Ajouter bloc',
-        'prompt_share' => 'Ajouter bloc partagé'
+        'prompt' => 'Ajouter un bloc',
+        'prompt_share' => 'Ajouter un bloc partagé'
     ],
     'scopes' => [
         'conditions_id' => [
-            'description' => 'Description condition',
-            'label' => 'Titre condition'
+            'description' => 'Description de la condition',
+            'label' => 'Titre de la condition'
         ],
-        'field' => 'Champs',
+        'field' => 'Champ',
         'field_com' => 'Commentaire sur le champ',
         'id' => 'ID',
-        'id_com' => 'Commentaire sur ID',
-        'libelle' => 'Libelle',
-        'scope_bool' => 'Filtre bool',
-        'scope_field' => 'filtre champ',
-        'scope_field_com' => 'filtre champ com',
+        'id_com' => 'Commentaire sur l\'ID',
+        'libelle' => 'Libellé',
+        'scope_bool' => 'Filtre booléen',
+        'scope_field' => 'Filtre champ',
+        'scope_field_com' => 'Commentaire filtre champ',
         'scope_relation' => 'Filtre sur relation',
-        'scope_relation_com' => 'Filtre relation com',
+        'scope_relation_com' => 'Commentaire filtre relation',
         'scope_value' => 'Valeur du scope',
         'scope_values' => 'Valeurs du scope',
-        'scope_values_com' => 'Valeurs du scope com',
+        'scope_values_com' => 'Commentaire valeurs du scope',
         'self' => 'SELF',
         'target' => 'Cible',
-        'target_com' => 'Cible com',
-        'userRoles' => 'Role utilisateur',
+        'target_com' => 'Commentaire cible',
+        'userRoles' => 'Rôle utilisateur',
         'users' => 'Utilisateurs'
     ]
 ];
