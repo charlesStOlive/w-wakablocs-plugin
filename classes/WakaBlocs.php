@@ -6,7 +6,7 @@ class WakaBlocs
 {
     
     /**
-     * UNIQUEMENT POUR RULE pour ASK et FNC on utilise findAsk et findFnc qui sont dans leur prore classes.
+     * UNIQUEMENT POUR RULE pour ASK et FOR on utilise findAsk et findFnc qui sont dans leur prore classes.
      */
     public static function listBlocs($mode,$config, $parent)
     {

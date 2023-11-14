@@ -447,7 +447,7 @@ class SubForm extends Extendable
         });
     }
     /**
-     * UNIQUEMENT POUR RULE pour ASK et FNC on utilise findAsk et findFnc qui sont dans leur prore classes.
+     * UNIQUEMENT POUR RULE pour ASK et FOR on utilise findAsk et findFnc qui sont dans leur prore classes.
      */
     public static function findRules($mode, $targetClass = null, $dataSourceCode = null)
     {
